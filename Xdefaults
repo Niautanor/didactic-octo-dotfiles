@@ -1,17 +1,18 @@
-Rxvt*background : gray10
-#Rxvt*foreground : gray90
-Rxvt*foreground : white
+xft.dpi : 100
+
+Rxvt*background : white
+Rxvt*foreground : gray10
 
 Rxvt*buffered : true
 Rxvt*transparent : true
-Rxvt*fading : 60
-Rxvt*shading : 20
+Rxvt*fading : 20
+Rxvt*shading : 190
 Rxvt*blurRadius: 10
 
 Rxvt*scrollBar : false
 
-Rxvt*font : xft:DejavuSansMono:pixelsize=12:antialias=true
+Rxvt*font : xft:DejavuSansMono:pixelsize=10:antialias=true
 
 Rxvt*urgentOnBell : true
 
-Rxvt*url-launcher : chromium
+Rxvt*url-launcher : firefox

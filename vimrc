@@ -21,13 +21,13 @@ set smartcase
 
 set number
 set showcmd
-set background=dark
+set background=light
 " END MyOwnStuff
 
 " Python stuff (but it is also quite usefull in other Languages)
 "filetype indent plugin on "I think this is the same as the similar line below
-set tabstop=4
-set shiftwidth=0
+set tabstop=2
+set shiftwidth=2
 set expandtab
 
 "vim latex suite
@@ -53,7 +53,7 @@ set tw=80
 "character, which means that I have to define the map for every unsupported
 "character (which sadly includes <C-j>. You can use <C-v> in insert mode to
 "insert a character literally and see what vim will see it as)
-inoremap <NUL> <C-X><C-U>
+"inoremap <NUL> <C-X><C-U>
 "When you open a .class file in eclim, Eclipse will give you all method
 "declarations but it won't show you the code. For some reason this is more
 "important than the vim-jad plugin that I like more which is why I disable this
@@ -67,16 +67,17 @@ inoremap <NUL> <C-X><C-U>
 
 "I like my Maven poms to be indented with two spaces
 augroup FileSpecificSettings
+    au!
     autocmd BufRead pom.xml :set sw=2
+    autocmd Filetype tex :set sw=4
 augroup END
 
-"Für das Projekt interactive Systems im WS2015. Ich habe den coding style auf
-"indent with tabs und Leerzeichen in leeren Zeilen nicht entfernen festgelegt
-augroup ISWS15_Coding_Style
-    "I don't want to expand tabs because I want spaces
-    autocmd BufRead /home/tim/Hausaufgaben/Interactive\ Systems/*.java  :set noet
-    autocmd BufRead /home/tim/Hausaufgaben/Interactive\ Systems/*.java  :set noet
-    autocmd BufRead /home/tim/Hausaufgaben/Interactive\ Systems/*.java :inoremap <buffer> <cr> <cr>x<bs>
-    autocmd BufRead /home/tim/Hausaufgaben/Interactive\ Systems/*.java :nnoremap <buffer> o ox<bs>
-    autocmd BufRead /home/tim/Hausaufgaben/Interactive\ Systems/*.java :nnoremap <buffer> O Ox<bs>
-augroup END
+
+"A helpful function when numbering things. Used in s/thing/\=vimscript to insert
+"an increasing number. Has to be initialized with :let g:i first
+let g:i = 1
+function Inc(...)
+    let s:result = g:i
+    let g:i += a:0 > 0 ? a:1 : 1
+    return s:result
+endfunction

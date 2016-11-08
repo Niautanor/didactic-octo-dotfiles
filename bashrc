@@ -13,6 +13,10 @@ export EDITOR=vim
 # Login ponies
 ponysay --q
 
-# & means, that duplicates of commands (if you run the same command twice) won't be reccorded in the history
-# source http://www.talug.org/events/20030709/cmdline_history.html
+# & means, that duplicates of commands (if you run the same command
+# twice) won't be reccorded in the history source:
+# http://www.talug.org/events/20030709/cmdline_history.html
 export HISTIGNORE="&"
+# This causes commands that begin with a space to not be entered into
+# the history file
+export HISTCONTROL="ignorespace"
