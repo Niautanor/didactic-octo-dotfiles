@@ -1,9 +1,9 @@
-version 6.0
-" vim: set ft=vim :
+version 7.2
+set nocompatible
 
 " BEGIN MyOwnStuff
 syntax enable
-set nocompatible
+filetype plugin indent on
 
 execute pathogen#infect()
 
@@ -24,14 +24,12 @@ set showcmd
 set background=light
 " END MyOwnStuff
 
-" Python stuff (but it is also quite usefull in other Languages)
-"filetype indent plugin on "I think this is the same as the similar line below
+" Originally for python. Nice anyway
 set tabstop=2
 set shiftwidth=2
 set expandtab
 
 "vim latex suite
-filetype plugin indent on
 set grepprg=grep\ -nH\ $*
 let g:tex_flavor = "latex"
 let g:Tex_DefaultTargetFormat = "pdf"
@@ -65,6 +63,10 @@ set tw=80
 "augroup! eclim_java_class_read
 "This is stupid
 
+"TODO: :help iskeyword
+"iskeyword kann anscheinend dafür verwendet werden, das _ als wortgrenzen
+"gesehen werden
+
 "I like my Maven poms to be indented with two spaces
 augroup FileSpecificSettings
     au!
@@ -72,6 +74,10 @@ augroup FileSpecificSettings
     autocmd Filetype tex :set sw=4
 augroup END
 
+augroup MyLaTeXIMAPS
+  au!
+  au VimEnter * call IMAP('footnote', "\\footnote{<++>}<++>", 'tex')
+augroup END
 
 "A helpful function when numbering things. Used in s/thing/\=vimscript to insert
 "an increasing number. Has to be initialized with :let g:i first
