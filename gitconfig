@@ -3,3 +3,6 @@
 	excludesfile = ~/.config/git/ignore
 [push]
 	default = simple
+[alias]
+	rekt = reset
+	co = checkout
