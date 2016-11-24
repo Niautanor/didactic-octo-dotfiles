@@ -10,8 +10,12 @@ local beautiful = require("beautiful")
 -- Notification library
 local naughty = require("naughty")
 local menubar = require("menubar")
+-- plugins from the web
+-- battery and network widgets
+local vicious = require("vicious")
 -- a few other layouts, widgets and utilities.
 -- I mainly installed it to get gaps around my windows.
+-- It can also replace the battery widget from vicious
 local lain    = require("lain")
 
 -- {{{ Error handling
@@ -70,14 +74,15 @@ local layouts =
     awful.layout.suit.max,
 --    awful.layout.suit.max.fullscreen,
 --    awful.layout.suit.magnifier
-    lain.layout.uselessfair,
-    lain.layout.uselessfair.horizontal
+    lain.layout.uselessfair
 }
 -- }}}
 
 -- {{{ Wallpaper
 if beautiful.wallpaper then
-    gears.wallpaper.maximized(beautiful.wallpaper, nil)
+    for s = 1, screen.count() do
+        gears.wallpaper.maximized(beautiful.wallpaper, s, true)
+    end
 end
 -- }}}
 
@@ -86,7 +91,7 @@ end
 tags = {}
 for s = 1, screen.count() do
     -- Each screen has its own tag table.
-    tags[s] = awful.tag({ "Main", "Terminal", "WWW", "Stuff", "Clobber", "Bunk", "Floating" }, s, { s == 1 and layouts[9] or layouts[10], layouts[9], layouts[8], layouts[10], layouts[9], layouts[9], layouts[1] })
+    tags[s] = awful.tag({ "Thunder", "Terminal", "WWW", "Things", "Clobber", "Bunk", "Floating Stuff" }, s, { layouts[9], layouts[3], layouts[8], layouts[8], layouts[8], layouts[8], layouts[1] })
 end
 -- }}}
 
@@ -112,8 +117,36 @@ menubar.utils.terminal = terminal -- Set the terminal for applications that requ
 -- }}}
 
 -- {{{ Wibox
+markup = lain.util.markup
+
 -- Create a textclock widget
 mytextclock = awful.widget.textclock()
+
+--Textbox for Battery Widget
+batterybox = lain.widgets.bat({
+  timeout = 61,
+  settings = function()
+		-- stolen from vicious' battery widget
+		local battery_state = {
+        ["N/A"]         = "⌁",
+        ["Discharging"] = "−",
+        ["Charging"]    = "+",
+        ["Full"]        = "↯",
+		}
+		local state = battery_state[bat_now.status] or battery_state["N/A"]
+		perc = state .. bat_now.perc .. "%"
+		widget:set_markup(markup("#FFA71A", perc))
+  end
+})
+-- batterybox = wibox.widget.textbox()
+-- batterybox:set_text("")
+-- vicious.register(batterybox, vicious.widgets.bat, "<span foreground=\"#FFA71A\">$1$2%</span>", 61, "BAT0")
+
+--Textbox for Network stuff
+wifibox = wibox.widget.textbox()
+wifibox:set_text("")
+vicious.register(wifibox, vicious.widgets.wifi, "${ssid} (${link}) ", 29, "wlan0")
+--UNDER CONSTRUCTION
 
 -- Create a wibox for each screen and add it
 mywibox = {}
@@ -195,6 +228,8 @@ for s = 1, screen.count() do
     -- Widgets that are aligned to the right
     local right_layout = wibox.layout.fixed.horizontal()
     if s == 1 then right_layout:add(wibox.widget.systray()) end
+    right_layout:add(wifibox)
+    right_layout:add(batterybox)
     right_layout:add(mytextclock)
     right_layout:add(mylayoutbox[s])
 

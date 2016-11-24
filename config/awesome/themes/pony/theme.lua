@@ -8,7 +8,7 @@
 
 -- {{{ Main
 theme = {}
-theme.wallpaper = "~/.config/awesome/themes/pony/multimonitor-pearl-drunk.png"
+theme.wallpaper = "~/.config/awesome/themes/pony/tox-space-wallpaper.png"
 -- }}}
 
 -- width of uesless gaps (for lain layouts with gaps between windows)
