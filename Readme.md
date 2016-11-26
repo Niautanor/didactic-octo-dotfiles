@@ -1,3 +1,4 @@
-# #hashtag
+# My personal dotfile repository
 
-:new_moon_with_face: :nerd_face: :new_moon_with_face:
+You probably don't want to use the desktop or laptop branches because I will
+rebase them quite frequently.
