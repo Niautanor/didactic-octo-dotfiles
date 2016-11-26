@@ -24,4 +24,9 @@ xrdb -merge ~/.Xresources
 # alternative description "make the screen red"
 redshift &
 
+# see urxvtd(1)
+# basically this means that I can use urxvtd to keep all my terminals in the
+# same process for alleged faster startup times ¯\_(ツ)_/¯
+urxvtd -q -f
+
 exec awesome
