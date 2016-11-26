@@ -21,4 +21,8 @@ xset -b
 # alternative description "make the screen red"
 redshift &
 
+# powerdown specific stuff
+xset +dpms
+xset dpms 0 0 300
+
 exec awesome
