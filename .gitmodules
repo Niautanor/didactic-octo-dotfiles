@@ -1,3 +1,9 @@
 [submodule "config/awesome/lain"]
 	path = config/awesome/lain
 	url = https://github.com/copycat-killer/lain.git
+[submodule "urxvt/urxvt-font-size"]
+	path = urxvt/urxvt-font-size
+	url = https://github.com/majutsushi/urxvt-font-size
+[submodule "vim/bundle/vim-pathogen"]
+	path = vim/bundle/vim-pathogen
+	url = https://github.com/tpope/vim-pathogen

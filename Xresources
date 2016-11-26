@@ -16,3 +16,8 @@ Rxvt*font : xft:DejavuSansMono:pixelsize=10:antialias=true
 Rxvt*urgentOnBell : true
 
 Rxvt*url-launcher : firefox
+
+URxvt.perl-ext-common: font-size
+URxvt.keysym.Meta-plus : font-size:increase
+URxvt.keysym.Meta-minus : font-size:decrease
+URxvt.keysym.Meta-numbersign : font-size:reset
