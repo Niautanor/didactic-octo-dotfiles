@@ -23,6 +23,6 @@ for f in ${DOTFILES[@]}; do
       mkdir -vp ~/dotfilebackup/$(dirname $f);
       mv -v ~/.$f ~/dotfilebackup/$f;
     fi;
-    ln -sv $(readlink -e ${GITDIR})/$f ~/.$f;
+    ln -svT $(readlink -e ${GITDIR})/$f ~/.$f;
   fi;
 done;
