@@ -17,6 +17,9 @@ xmodmap ~/.Xmodmaprc
 # disable console beep
 xset -b
 
+# load Xresources (mainly urxvt configuration)
+xrdb -merge ~/.Xresources
+
 # change colour temperature depending on time of day
 # alternative description "make the screen red"
 redshift &
