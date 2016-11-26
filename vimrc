@@ -5,6 +5,9 @@ set nocompatible
 syntax enable
 filetype plugin indent on
 
+" Pathogen is sortof a very basic plugin manager for vim
+" see https://github.com/tpope/vim-pathogen for details
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 " Map Backward motions to be inclusive (they are exclusive by default meaning,

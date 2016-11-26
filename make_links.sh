@@ -12,7 +12,18 @@
 #    that the first part of the path still is going to be prefixed with a dot.
 #    config/awesome/rc.lua -> .config/awesome/rc.lua
 
-DOTFILES=(bashrc inputrc vimrc gitconfig xinitrc Xresources Xmodmaprc config/awesome urxvt)
+DOTFILES=(
+  bashrc
+  inputrc
+  vim
+  vimrc
+  gitconfig
+  xinitrc
+  Xresources
+  Xmodmaprc
+  config/awesome
+  urxvt
+)
 
 GITDIR=$(readlink -e $(dirname $0))
 
