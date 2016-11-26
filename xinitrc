@@ -21,4 +21,7 @@ xset -b
 # alternative description "make the screen red"
 redshift &
 
+xset s off
+xset -dpms
+
 exec awesome
