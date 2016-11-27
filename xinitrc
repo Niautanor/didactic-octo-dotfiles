@@ -8,6 +8,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+# compsiting (i.e. transparent windows and drop shadows)
+compton &
+
 # set keyboard layout
 setxkbmap -layout de -variant nodeadkeys
 
