@@ -1,13 +1,15 @@
+! you can comment out lines by prefixing them with !. C preprocessor directives
+! (i.e. #include "other_file" are als supported)
 xft.dpi : 100
 
-Rxvt*background : white
+Rxvt*buffered : true
+Rxvt*depth : 32
+
+Rxvt*background : [95]white
 Rxvt*foreground : gray10
 
-Rxvt*buffered : true
-Rxvt*transparent : true
 Rxvt*fading : 20
-Rxvt*shading : 190
-Rxvt*blurRadius: 10
+URxvt*fadeColor: [50]white
 
 Rxvt*scrollBar : false
 
