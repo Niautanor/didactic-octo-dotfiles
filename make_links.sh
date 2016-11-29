@@ -17,6 +17,7 @@ DOTFILES=(
   inputrc
   vim
   vimrc
+  taskrc
   gitconfig
   xinitrc
   Xresources
