@@ -5,12 +5,6 @@ xft.dpi : 100
 Rxvt*buffered : true
 Rxvt*depth : 32
 
-Rxvt*background : [95]white
-Rxvt*foreground : gray10
-
-Rxvt*fading : 20
-URxvt*fadeColor: [50]white
-
 Rxvt*scrollBar : false
 
 Rxvt*font : xft:DejavuSansMono:pixelsize=10:antialias=true
@@ -23,3 +17,56 @@ URxvt.perl-ext-common: font-size
 URxvt.keysym.Meta-plus : font-size:increase
 URxvt.keysym.Meta-minus : font-size:decrease
 URxvt.keysym.Meta-numbersign : font-size:reset
+
+! Base16 Tomorrow
+! Scheme: Chris Kempson (http://chriskempson.com)
+
+!#define base00 #ffffff
+#define base00 #1d1f21
+!#define base01 #e0e0e0
+#define base01 #282a2e
+!#define base02 #d6d6d6
+#define base02 #969896
+!#define base03 #8e908c
+#define base03 #4d4d4c
+!#define base04 #969896
+#define base04 #8e908c
+!#define base05 #4d4d4c
+#define base05 #d6d6d6
+!#define base06 #282a2e
+#define base06 #e0e0e0
+!#define base07 #1d1f21
+#define base07 #ffffff
+#define base08 #c82829
+#define base09 #f5871f
+#define base0A #eab700
+#define base0B #718c00
+#define base0C #3e999f
+#define base0D #4271ae
+#define base0E #8959a8
+#define base0F #a3685a
+
+Rxvt*foreground:   base00
+Rxvt*background:   [95]white
+Rxvt*cursorColor:  base00
+
+Rxvt*fading:       20
+Rxvt*fadeColor:    [50]base07
+
+*.color0:       base00
+*.color1:       base08
+*.color2:       base0B
+*.color3:       base0A
+*.color4:       base0D
+*.color5:       base0E
+*.color6:       base0C
+*.color7:       base05
+
+*.color8:       base03
+*.color9:       base08
+*.color10:      base0B
+*.color11:      base0A
+*.color12:      base0D
+*.color13:      base0E
+*.color14:      base0C
+*.color15:      base07
