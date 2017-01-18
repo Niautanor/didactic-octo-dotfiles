@@ -1,6 +1,3 @@
 remove Lock = Caps_Lock
 keysym Caps_Lock = Escape
 keysym Print = Super_R
-
-keysym Shift_R = Shift_R Shift_Lock
-keysym Shift_L = Shift_L Shift_Lock

@@ -6,3 +6,5 @@
 [alias]
 	rekt = reset
 	co = checkout
+[merge]
+	conflictstyle = diff3
