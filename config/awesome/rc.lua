@@ -267,6 +267,10 @@ globalkeys = awful.util.table.join(
     awful.key({ modkey,           }, "Escape", awful.tag.history.restore,
               {description = "go back", group = "tag"}),
 
+-- Cutie mark crusader screen lockers yay!
+    awful.key({ modkey,           }, "w", function()
+        awful.util.spawn("i3lock -c 333333") end),
+
     awful.key({ modkey,           }, "j",
         function ()
             awful.client.focus.byidx( 1)
