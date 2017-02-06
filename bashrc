@@ -10,8 +10,13 @@ PS1='[\u@\h \W]\$ '
 
 export EDITOR=vim
 
+alias snek=python
+
 # Login ponies
 ponysay --q
+
+# append to the history instead of overwriting it
+shopt -s histappend
 
 # & means, that duplicates of commands (if you run the same command
 # twice) won't be reccorded in the history source:
