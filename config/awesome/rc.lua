@@ -187,15 +187,10 @@ awful.screen.connect_for_each_screen(function(s)
     -- Wallpaper
     set_wallpaper(s)
 
+    local landscape = s.geometry.width > s.geometry.height
+    local prilayout = landscape and awful.layout.layouts[9] or awful.layout.layouts[10]
     -- Each screen has its own tag table.
-    awful.tag({ "Main", "Terminal", "WWW", "Stuff", "Clobber", "Bunk", "Floating" }, s, {
-        s.geometry.width > s.geometry.height and awful.layout.layouts[9] or awful.layout.layouts[10],
-        awful.layout.layouts[9],
-        awful.layout.layouts[8],
-        awful.layout.layouts[10],
-        awful.layout.layouts[9],
-        awful.layout.layouts[9],
-        awful.layout.layouts[1] })
+    awful.tag({ "Main", "Terminal", "WWW", "Stuff", "Clobber", "Bunk", "Floating" }, s, prilayout)
 
     -- Create a promptbox for each screen
     s.mypromptbox = awful.widget.prompt()
