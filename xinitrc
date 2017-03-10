@@ -9,7 +9,9 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
 fi
 
 # compsiting (i.e. transparent windows and drop shadows)
-compton &
+# currently, this causes the lower half of urxvt to hang occasionally which is
+# really annoying. Oddly, this only happens on my laptop
+# compton &
 
 # set keyboard layout
 setxkbmap -layout de -variant nodeadkeys
