@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 export EDITOR=vim
 
 alias snek=python
+alias xboard='xclip -selection clipboard'
 
 # Login ponies
 ponysay --q
