@@ -251,13 +251,13 @@ globalkeys = awful.util.table.join(
 -- Cutie mark crusader media key bindings yay
     awful.key({}, "XF86AudioMute", function()
         awful.util.spawn("amixer set Master toggle") end,
-        {description = "mute audio"}),
+        {description = "mute audio", group = "awesome"}),
     awful.key({}, "XF86AudioRaiseVolume", function()
         awful.util.spawn("amixer set Master 5%+")end,
-        {description = "increase volume by 5%"}),
+        {description = "increase volume by 5%", group = "awesome"}),
     awful.key({}, "XF86AudioLowerVolume", function()
         awful.util.spawn("amixer set Master 5%-")end,
-        {description = "decrease volume by 5%"}),
+        {description = "decrease volume by 5%", group = "awesome"}),
     awful.key({ modkey,           }, "s",      hotkeys_popup.show_help,
               {description="show help", group="awesome"}),
     awful.key({ modkey,           }, "Left",   awful.tag.viewprev,
@@ -269,7 +269,12 @@ globalkeys = awful.util.table.join(
 
 -- Cutie mark crusader screen lockers yay!
     awful.key({ modkey,           }, "w", function()
-        awful.util.spawn("i3lock -c 333333") end),
+        awful.util.spawn("i3lock -c 333333") end,
+        {description = "lock screen", group = "launcher"}),
+-- Cutie mark crusader screen shot helpers yay!
+    awful.key({ modkey,           }, "a", function()
+        awful.util.spawn("scrot") end,
+        {description = "take screenshot", group = "launcher"}),
 
     awful.key({ modkey,           }, "j",
         function ()
