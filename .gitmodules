@@ -8,5 +8,5 @@
 	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
 [submodule "vim/vim-project"]
-	path = vim/vim-project
+	path = vim/bundle/vim-project
 	url = https://github.com/amiorin/vim-project
