@@ -90,3 +90,11 @@ function Inc(...)
     let g:i += a:0 > 0 ? a:1 : 1
     return s:result
 endfunction
+
+" inserts the identifier (for c like languages) that is curerntly under the
+" cursor. Useful for things like :cs find c <c-e> to find functions that call
+" the function under the cursor
+cnoremap <c-e> <c-r>=expand("<cword>")<cr>
+
+" vim latex suite: alt-i in terminal mode gets converted to escape i
+imap i <a-i>
