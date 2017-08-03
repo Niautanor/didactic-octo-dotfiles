@@ -12,6 +12,9 @@ local menubar = require("menubar")
 -- a few other layouts, widgets and utilities.
 -- I mainly installed it to get gaps around my windows.
 local lain    = require("lain")
+-- my own layouts (i.e. my modified version of magnifier)
+local mylayouts = require("layouts")
+-- hotkey popups
 local hotkeys_popup = require("awful.hotkeys_popup").widget
 
 -- {{{ Error handling
