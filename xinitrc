@@ -23,6 +23,9 @@ xset -b
 # load Xresources (mainly urxvt configuration)
 xrdb -merge ~/.Xresources
 
+# input method bus (for typing japanese characters)
+ibus-daemon &
+
 # change colour temperature depending on time of day
 # alternative description "make the screen red"
 redshift &
