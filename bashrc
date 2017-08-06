@@ -13,6 +13,11 @@ export EDITOR=vim
 alias snek=python
 alias xboard='xclip -selection clipboard'
 
+# settings to make ibus work reliably
+export GTK_IM_MODULE=ibus
+export QT_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+
 # Login ponies
 ponysay --q
 
