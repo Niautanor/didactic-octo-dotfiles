@@ -1,2 +1,4 @@
-# put [user] name = ... email = ...
-gitusername.inc
+# put [user] name = ... email = ... here
+/gitusername.inc
+# put taskd.{server,certificate,server,credentials,ca} here
+/taskservercredentials.inc
