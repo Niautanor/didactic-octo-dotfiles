@@ -8,3 +8,6 @@
 	co = checkout
 [merge]
 	conflictstyle = diff3
+[include]
+	# put [user] name = ... email = ... there
+	path=~/dotfiles/gitusername.inc
