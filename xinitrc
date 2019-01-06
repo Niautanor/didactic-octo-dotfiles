@@ -28,7 +28,9 @@ ibus-daemon &
 
 # change colour temperature depending on time of day
 # alternative description "make the screen red"
-redshift &
+redshift -l 52.5256452:13.3302858 &
+# This can also be handled by a systemd user unit. However, this does not work
+# if you don't use a login manager since it doesn't wait for X to start
 
 xset s off
 xset -dpms

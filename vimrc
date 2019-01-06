@@ -28,8 +28,8 @@ set background=light
 " END MyOwnStuff
 
 " Originally for python. Nice anyway
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=0
 set expandtab
 
 "vim latex suite
@@ -97,4 +97,9 @@ endfunction
 cnoremap <c-e> <c-r>=expand("<cword>")<cr>
 
 " vim latex suite: alt-i in terminal mode gets converted to escape i
-imap i <a-i>
+" TODO: make sure that this only gets triggered for latex files
+" imap i <a-i>
+
+" learn vimscript the hard way mappings and settings
+inoremap <c-u> <esc>viwUi
+nnoremap <c-u> viwU
