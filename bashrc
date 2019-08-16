@@ -18,9 +18,6 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
-# Login ponies
-ponysay --q
-
 # append to the history instead of overwriting it
 shopt -s histappend
 
@@ -48,3 +45,14 @@ function stopwatch(){
     sleep 0.1
    done
 }
+
+# manually installed stuff
+export PATH=$PATH:/opt/arm-none-eabi/bin:/opt/netbeans/bin
+
+# enable bash completions on ubuntu
+if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
+  . /etc/bash_completion
+fi
+
+# Login ponies
+ponysay --q

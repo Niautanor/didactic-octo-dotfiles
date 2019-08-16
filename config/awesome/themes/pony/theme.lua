@@ -15,13 +15,7 @@ local lain_path = os.getenv("HOME") .. "/.config/awesome/lain/icons/layout/defau
 -- TODO: this is a bit hacky but it works fine for assigning individual
 -- wallpapers for now
 function theme.wallpaper(screen)
-    if screen.geometry.width == 2560 and screen.geometry.height == 1080 then
-        return theme_path .. "pearl-drunk-2560x1080.png"
-    elseif screen.geometry.width == 720 and screen.geometry.height == 1280 then
-        return theme_path .. "falcon-landing-720x1280.png"
-    end
-    -- elseif screen.geometry.width = 1080 and screen.geometry.height == 1920 then
-    return theme_path .. "falcon-landed-1080x1920.png"
+    return theme_path .. "steven_universe.png"
 end
 -- }}}
 

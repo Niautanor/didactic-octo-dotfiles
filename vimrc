@@ -79,7 +79,7 @@ augroup END
 
 augroup MyLaTeXIMAPS
   au!
-  au VimEnter * call IMAP('footnote', "\\footnote{<++>}<++>", 'tex')
+  au VimEnter tex call IMAP('footnote', "\\footnote{<++>}<++>", 'tex')
 augroup END
 
 "A helpful function when numbering things. Used in s/thing/\=vimscript to insert
