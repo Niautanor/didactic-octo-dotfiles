@@ -3,3 +3,4 @@ set keymap vi-command
 set completion-ignore-case On
 set show-all-if-ambiguous On
 set match-hidden-files off
+set skip-completed-text on
