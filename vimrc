@@ -28,8 +28,8 @@ set background=light
 " END MyOwnStuff
 
 " Originally for python. Nice anyway
-set tabstop=2
-set shiftwidth=2
+set tabstop=4
+set shiftwidth=0
 set expandtab
 
 "vim latex suite
