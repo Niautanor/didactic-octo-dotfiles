@@ -22,7 +22,7 @@ DOTFILES=(
   xinitrc
   Xresources
   Xmodmaprc
-  config/awesome
+  config/sway
   urxvt
 )
 
