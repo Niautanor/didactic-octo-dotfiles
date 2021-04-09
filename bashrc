@@ -45,3 +45,7 @@ function stopwatch(){
     sleep 0.1
    done
 }
+
+camelcase() {
+    perl -pe 's#(_|^)(.)#\u$2#g'
+}
