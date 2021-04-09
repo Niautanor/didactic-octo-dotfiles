@@ -72,3 +72,5 @@ cnoremap <c-e> <c-r>=expand("<cword>")<cr>
 
 " vim latex suite: alt-i in terminal mode gets converted to escape i
 imap i <a-i>
+
+set foldmethod=syntax
