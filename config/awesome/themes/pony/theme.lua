@@ -12,7 +12,7 @@ theme = {}
 local theme_path = os.getenv("HOME") .. "/.config/awesome/themes/pony/"
 local lain_path = os.getenv("HOME") .. "/.config/awesome/lain/icons/layout/default/"
 
-theme.wallpaper = theme_path .. "multimonitor-pearl-drunk.png"
+theme.wallpaper = theme_path .. "factorio_notitle_HD.png"
 -- }}}
 
 -- width of uesless gaps (for lain layouts with gaps between windows)
