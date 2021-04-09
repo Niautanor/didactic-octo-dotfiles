@@ -18,9 +18,6 @@ export GTK_IM_MODULE=ibus
 export QT_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 
-# Login ponies
-ponysay --q
-
 # append to the history instead of overwriting it
 shopt -s histappend
 
