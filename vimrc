@@ -32,22 +32,12 @@ set tabstop=4
 set shiftwidth=0
 set expandtab
 
-"vim latex suite
-set grepprg=grep\ -nH\ $*
-let g:tex_flavor = "latex"
-let g:Tex_DefaultTargetFormat = "pdf"
-let g:Tex_GotoError = 0
-
 "absolutely nice. It allows me to use the mouse when I'm in normal or visual
 "mode (selecting text in normal mode will put me into visual mode). Scrolling
 "also works. The only downside is, that selected text will not get copied to
 "Xs clipboard. You can work around that by entering insert mode first, which
 "will disable mouse support temporarily
 set mouse=nv
-
-"This will automatically wrap lines at 80 characters, which is very useful for
-"LaTeX as well as Linux Kernel hacking.
-set tw=80
 
 "Eclim keybindings
 "Control-Space -> Autocompletion. C-Space isn't actually a supported
@@ -65,22 +55,6 @@ set tw=80
 "autocmd BufReadCmd *.class :echom "fu"
 "augroup! eclim_java_class_read
 "This is stupid
-
-"TODO: :help iskeyword
-"iskeyword kann anscheinend dafür verwendet werden, das _ als wortgrenzen
-"gesehen werden
-
-"I like my Maven poms to be indented with two spaces
-augroup FileSpecificSettings
-    au!
-    autocmd BufRead pom.xml :set sw=2
-    autocmd Filetype tex :set sw=4
-augroup END
-
-augroup MyLaTeXIMAPS
-  au!
-  au VimEnter * call IMAP('footnote', "\\footnote{<++>}<++>", 'tex')
-augroup END
 
 "A helpful function when numbering things. Used in s/thing/\=vimscript to insert
 "an increasing number. Has to be initialized with :let g:i first
