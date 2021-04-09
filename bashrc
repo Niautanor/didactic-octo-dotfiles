@@ -45,3 +45,5 @@ function stopwatch(){
     sleep 0.1
    done
 }
+
+source ~/.digiteq-credentials
