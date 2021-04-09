@@ -46,4 +46,8 @@ function stopwatch(){
    done
 }
 
+camelcase() {
+    perl -pe 's#(_|^)(.)#\u$2#g'
+}
+
 source ~/.digiteq-credentials
