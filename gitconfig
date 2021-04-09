@@ -11,3 +11,5 @@
 [include]
 	# put [user] name = ... email = ... there
 	path=~/dotfiles/gitusername.inc
+[credential]
+	helper = store
