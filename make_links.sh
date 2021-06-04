@@ -23,6 +23,7 @@ DOTFILES=(
   Xresources
   Xmodmaprc
   config/sway
+  config/waybar
   urxvt
 )
 
