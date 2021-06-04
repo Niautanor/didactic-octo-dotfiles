@@ -24,7 +24,7 @@ set smartcase
 
 set number
 set showcmd
-set background=light
+set background=dark
 " END MyOwnStuff
 
 " Originally for python. Nice anyway
@@ -75,11 +75,6 @@ augroup FileSpecificSettings
     au!
     autocmd BufRead pom.xml :set sw=2
     autocmd Filetype tex :set sw=4
-augroup END
-
-augroup MyLaTeXIMAPS
-  au!
-  au VimEnter * call IMAP('footnote', "\\footnote{<++>}<++>", 'tex')
 augroup END
 
 "A helpful function when numbering things. Used in s/thing/\=vimscript to insert

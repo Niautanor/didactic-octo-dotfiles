@@ -25,12 +25,17 @@ set $screenshot grim screenshot.png
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
+
 # You can get the names of your outputs by running: swaymsg -t get_outputs
+output 'Samsung Electric Company SyncMaster H9MZ801920' transform 270 pos 0 0
+output 'Goldstar Company Ltd LG ULTRAWIDE 0x00000101' pos 1080 420
+output 'Goldstar Company Ltd E2251 112LTEN1L124' transform 90 pos 3640 0
+
+# A 10-pixel border around every window
+gaps inner 10
+
+# disable title bar and borders in window decorations
+default_border none
 
 ### Idle configuration
 #
@@ -63,10 +68,6 @@ output * bg /usr/share/backgrounds/sway/Sway_Wallpaper_Blue_1920x1080.png fill
 input type:keyboard {
     xkb_layout "de"
     xkb_variant "nodeadkeys"
-}
-
-input 2:7:SynPS/2_Synaptics_TouchPad {
-    dwt disabled # don't disable while typing because it makes games really hard
 }
 
 ### Key bindings
