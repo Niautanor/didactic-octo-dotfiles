@@ -21,8 +21,8 @@ DOTFILES=(
   gitconfig
   xinitrc
   Xresources
-  Xmodmaprc
   config/sway
+  config/kitty
   urxvt
 )
 
