@@ -24,7 +24,7 @@ set smartcase
 
 set number
 set showcmd
-set background=light
+set background=dark
 " END MyOwnStuff
 
 " Originally for python. Nice anyway
