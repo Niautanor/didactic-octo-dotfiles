@@ -13,10 +13,14 @@ export EDITOR=vim
 alias snek=python
 alias xboard='xclip -selection clipboard'
 
-# settings to make ibus work reliably
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
+# settings to make fcitx work reliably
+export INPUT_METHOD=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# Make firefox use the wayland backend
+export MOZ_ENABLE_WAYLAND=1
 
 # append to the history instead of overwriting it
 shopt -s histappend

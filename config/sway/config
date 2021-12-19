@@ -241,5 +241,5 @@ include /etc/sway/config.d/*
 exec xset -b
 # load Xresources (mainly urxvt configuration)
 exec xrdb -merge ~/.Xresources
-# input method bus (for typing japanese characters)
-exec ibus-daemon -xrd
+# input method framework (for typing japanese characters)
+exec_always fcitx5 -d --replace
