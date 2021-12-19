@@ -45,3 +45,5 @@ function stopwatch(){
     sleep 0.1
    done
 }
+
+alias vijournal='vim ~/Dokumente/Journal/$(date +%Y/%V)/journal.txt'
