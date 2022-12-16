@@ -22,9 +22,10 @@ set $menu dmenu_path | bemenu | xargs swaymsg exec --
 set $screenshot grim screenshot.png
 
 # start redshift for this sway session
-exec redshift -l 52.3934918:13.0881829
-# Temporary canada
-# exec redshift -l 42.9893159:-81.3064487
+# redshift uses geoclue for location info which requires an agent that is only
+# manually started in Gnome sessions. Why? I have no idea
+exec --no-startup-id /usr/lib/geoclue-2.0/demos/agent
+exec --no-startup-id redshift -l 52.3934918:13.0881829
 
 ### Output configuration
 #
