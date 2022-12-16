@@ -23,6 +23,7 @@ DOTFILES=(
   Xresources
   config/sway
   config/kitty
+  config/gdb
   urxvt
 )
 
