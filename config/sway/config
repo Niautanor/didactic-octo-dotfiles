@@ -23,6 +23,8 @@ set $screenshot grim screenshot.png
 
 # start redshift for this sway session
 exec redshift -l 52.3934918:13.0881829
+# Temporary canada
+# exec redshift -l 42.9893159:-81.3064487
 
 ### Output configuration
 #
