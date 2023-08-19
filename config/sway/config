@@ -93,7 +93,7 @@ input 2:7:SynPS/2_Synaptics_TouchPad {
     bindsym $mod+g exec $screenshot
 
     # lock the screen
-    bindsym $mod+w exec swaylock
+    bindsym $mod+w exec swaylock -c 333333
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
