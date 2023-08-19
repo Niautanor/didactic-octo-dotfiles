@@ -10,9 +10,6 @@
 
 # Use the command 'task show' to see all defaults and overrides
 
-# Files
-data.location=~/.task
-
 # Color theme (uncomment one to use)
 #include /usr/share/doc/task/rc/light-16.theme
 #include /usr/share/doc/task/rc/light-256.theme
@@ -28,3 +25,5 @@ include /usr/share/doc/task/rc/dark-256.theme
 urgency.uda.priority.L.coefficient=-2.0
 
 include ~/dotfiles/taskservercredentials.inc
+
+news.version=2.6.0
