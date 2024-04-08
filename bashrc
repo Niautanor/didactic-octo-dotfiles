@@ -11,6 +11,7 @@ PS1='[\u@\h \W]\$ '
 export EDITOR=vim
 
 alias snek=python
+alias isnek=ipython
 alias xboard='xclip -selection clipboard'
 
 # settings to make ibus work reliably
