@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 # symlinks the dotfiles in this repository to their system location and backs
 # them up if they already exist. If update-git is given as an argument, the
 # system dotfilse are copied to the git repository instead. If the first
