@@ -31,12 +31,6 @@ exec --no-startup-id redshift
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
 output * bg ~/.config/sway/wallpaper.png fill
-#
-# Example configuration:
-#
-#   output HDMI-A-1 resolution 1920x1080 position 1920,0
-#
-# You can get the names of your outputs by running: swaymsg -t get_outputs
 
 ### Idle configuration
 #
@@ -67,13 +61,7 @@ output * bg ~/.config/sway/wallpaper.png fill
 # Read `man 5 sway-input` for more information about this section.
 
 input type:keyboard {
-    xkb_layout "de"
-    xkb_variant "nodeadkeys"
     xkb_options "caps:escape"
-}
-
-input 2:7:SynPS/2_Synaptics_TouchPad {
-    dwt disabled # don't disable while typing because it makes games really hard
 }
 
 ### Key bindings
@@ -246,3 +234,5 @@ exec xset -b
 exec xrdb -merge ~/.Xresources
 # input method framework (for typing japanese characters)
 exec_always fcitx5 -d --replace
+
+include $(hostname).conf
