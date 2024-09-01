@@ -17,12 +17,13 @@ DOTFILES=(
   inputrc
   vim
   vimrc
-  taskrc
   gitconfig
   xinitrc
   Xresources
-  Xmodmaprc
-  config/awesome
+  config/sway
+  config/kitty
+  config/gdb
+  config/task
   urxvt
 )
 

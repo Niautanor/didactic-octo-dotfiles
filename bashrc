@@ -5,6 +5,10 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+# BEGIN_KITTY_SHELL_INTEGRATION
+if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
+# END_KITTY_SHELL_INTEGRATION
+
 alias ls='ls --color=auto'
 PS1='[\u@\h \W]\$ '
 
@@ -13,10 +17,14 @@ export EDITOR=vim
 alias snek=python
 alias xboard='xclip -selection clipboard'
 
-# settings to make ibus work reliably
-export GTK_IM_MODULE=ibus
-export QT_IM_MODULE=ibus
-export XMODIFIERS=@im=ibus
+# settings to make fcitx work reliably
+export INPUT_METHOD=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export XMODIFIERS=@im=fcitx
+
+# Make firefox use the wayland backend
+export MOZ_ENABLE_WAYLAND=1
 
 # append to the history instead of overwriting it
 shopt -s histappend
@@ -49,3 +57,5 @@ function stopwatch(){
 camelcase() {
     perl -pe 's#(_|^)(.)#\u$2#g'
 }
+
+alias vijournal='vim ~/Dokumente/Journal/$(date +%Y/%V)/journal.txt'
