@@ -21,9 +21,10 @@ DOTFILES=(
   xinitrc
   Xresources
   config/sway
-  config/kitty
   config/gdb
+  config/kitty
   config/task
+  config/waybar
   urxvt
 )
 

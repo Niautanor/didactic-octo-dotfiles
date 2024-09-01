@@ -4,15 +4,9 @@
 [submodule "vim/bundle/vim-pathogen"]
 	path = vim/bundle/vim-pathogen
 	url = https://github.com/tpope/vim-pathogen
-[submodule "vim/vim-project"]
-	path = vim/bundle/vim-project
-	url = https://github.com/amiorin/vim-project
 [submodule "vim/bundle/nerdtree"]
 	path = vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree.git
-[submodule "vim/bundle/ultisnips"]
-	path = vim/bundle/ultisnips
-	url = https://github.com/sirver/ultisnips
 [submodule "vim/vim-fugitive"]
 	path = vim/vim-fugitive
 	url = https://github.com/tpope/vim-fugitive.git

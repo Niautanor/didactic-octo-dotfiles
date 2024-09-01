@@ -23,9 +23,6 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export XMODIFIERS=@im=fcitx
 
-# Make firefox use the wayland backend
-export MOZ_ENABLE_WAYLAND=1
-
 # append to the history instead of overwriting it
 shopt -s histappend
 
