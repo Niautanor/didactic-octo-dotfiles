@@ -13,3 +13,5 @@
 	path=~/dotfiles/gitusername.inc
 [credential]
 	helper = store
+[init]
+	defaultBranch = main
