@@ -56,3 +56,5 @@ camelcase() {
 }
 
 alias vijournal='vim ~/Dokumente/Journal/$(date +%Y/%V)/journal.txt'
+
+export PYTHON_BASIC_REPL=1
