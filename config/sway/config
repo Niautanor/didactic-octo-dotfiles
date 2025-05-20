@@ -72,8 +72,9 @@ default_border none
 # Read `man 5 sway-input` for more information about this section.
 
 input type:keyboard {
-    xkb_layout "de"
-    xkb_variant "nodeadkeys"
+    xkb_layout "us"
+    xkb_variant "altgr-intl"
+    xkb_options "nodeadkeys,caps:escape"
 }
 
 ### Key bindings
