@@ -47,6 +47,12 @@ function stopwatch(){
    done
 }
 
+# Python 3.13 has a new REPL that does not support vim key bindings
+PYTHON_BASIC_REPL=1
+
+if test -f "${HOME}/.cargo/env"; then
+    source "$HOME/.cargo/env"
+fi
 
 # BEGIN_KITTY_SHELL_INTEGRATION
 if test -n "$KITTY_INSTALLATION_DIR" -a -e "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; then source "$KITTY_INSTALLATION_DIR/shell-integration/bash/kitty.bash"; fi
