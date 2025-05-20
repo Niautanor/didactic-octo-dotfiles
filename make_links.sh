@@ -19,7 +19,6 @@ DOTFILES=(
   vimrc
   taskrc
   gitconfig
-  xinitrc
   Xresources
   Xmodmaprc
   config/sway
