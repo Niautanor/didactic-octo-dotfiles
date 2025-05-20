@@ -28,3 +28,4 @@ include /usr/share/doc/task/rc/dark-256.theme
 urgency.uda.priority.L.coefficient=-2.0
 
 include ~/dotfiles/taskservercredentials.inc
+news.version=2.6.0
