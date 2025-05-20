@@ -47,7 +47,7 @@ set mouse=nv
 
 "This will automatically wrap lines at 80 characters, which is very useful for
 "LaTeX as well as Linux Kernel hacking.
-set tw=80
+set tw=0
 
 "Eclim keybindings
 "Control-Space -> Autocompletion. C-Space isn't actually a supported
