@@ -11,5 +11,7 @@
 [include]
 	# put [user] name = ... email = ... there
 	path=~/dotfiles/gitusername.inc
+[pull]
+	ff = only
 [init]
 	defaultBranch = main
